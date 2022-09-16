@@ -3,7 +3,7 @@ export const GET_ALL_SONGS = "GET_ALL_SONGS";
 export const GET_ALBUM_ERROR = "GET_ALBUM_ERROR";
 export const TOGGLE_LOADER = "TOGGLE_LOADER";
 export const SET_USERNAME = "SET_USERNAME";
-// Artists
+
 export const GET_ARTIST_DATA = "GET_ARTIST_DATA";
 export const GET_ARTIST_CONTENT = "GET_ARTIST_CONTENT";
 export const DATA_IS_LOADING = "DATA_IS_LOADING";
@@ -51,7 +51,6 @@ export const getAlbumAction = (albumId) => {
         }, 1000);
       } else {
         console.log("Houston, we got an error :(");
-        // we can also dispatch ANOTHER action here for the error!
         dispatch({
           type: GET_ALBUM_ERROR,
         });
@@ -172,7 +171,7 @@ export const getSelectedArtistInfo = (artistId) => {
 
       if (response.ok) {
         let artist = await response.json();
-        // setArtist(artist);
+        
         dispatch({
           type: GET_ARTIST_DATA,
           payload: artist,
@@ -193,7 +192,7 @@ export const getSelectedArtistInfo = (artistId) => {
         );
         if (tracksResponse.ok) {
           let tracklist = await tracksResponse.json();
-          //   setSongs(tracklist.data);
+          
           dispatch({
             type: GET_ARTIST_CONTENT,
             payload: tracklist.data,

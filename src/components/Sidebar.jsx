@@ -68,29 +68,12 @@ const Sidebar = ({ search, searchArray, userName, likedLength }) => {
                   {search && (
                     <li>
                       <div className="input-group mt-3">
-                        {/*    <input
-                          type="text"
-                          className="form-control mb-2"
-                          id="searchField"
-                          placeholder="Search"
-                          aria-label="Search"
-                          aria-describedby="basic-addon2"
-                          onChange={(event) =>
-                            setSearchInput(event.currentTarget.value)
-                          }
-                        /> */}
+                        
                         <div
                           className="input-group-append"
                           style={{ marginBottom: "4%" }}
                         >
-                          {/* <button
-                            className="btn btn-outline-secondary btn-sm"
-                            type="button"
-                            id="button-addon1"
-                            onClick={() => search(searchInput)}
-                          >
-                            GO
-                          </button> */}
+                          
                         </div>
                       </div>
                     </li>
@@ -110,7 +93,7 @@ const Sidebar = ({ search, searchArray, userName, likedLength }) => {
           </div>
           <hr className="hr-styled" />
 
-          {showModal && <Modale /* username={username}  */ />}
+          {showModal && <Modale />}
 
           {userName ? (
             <>
